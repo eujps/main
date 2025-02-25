@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+<html lang="en-UK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="x-icon" href="assets/favicon.png">
+<link rel="stylesheet" href="layout.css">
+<link rel="stylesheet" href="slideshow.css">
+<title>Edinburgh University Justice for Palestine Society | Home</title>
+</head>
+<body> 
+<body bgcolor="black">
+
+<div class="navbar">
+	<a href="index.html"><img src="assets/logo.png" href="test.html" height=50px></a>
+  <a href="about.html">About Us</a>
+  <div class="dropdown">
+    <button class="dropbtn">Projects 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="divestment.html">Divestment</a>
+      <a href="fundraisers.html">Fundraisers</a>
+    </div>
+  </div> 
+  <div class="dropdown">
+    <button class="dropbtn">Statements 
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="actions.html">Our actions</a>
+      <a href="releases.html">Releases</a>
+	  <a href="archives.html">Archives</a>
+    </div>
+  </div> 
+  <a href="events.html">Events</a>
+  <a href="https://form.jotform.com/242525305723047">Get Involved</a>
+</div>
+<body>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="p9">Relevant image with a link to something important at the time</div>
+  <img src="assets/1.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="p9">as before</div>
+  <img src="assets/2.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <div class="p9">as before</div>
+  <img src="assets/3.png" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+	</body>
+</html>
